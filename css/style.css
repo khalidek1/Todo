@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+
+.container{
+    background-color: white;
+    width: 700px;
+    height: 600px;
+    border-radius: 6px;
+    box-shadow:  1px 1px 2px 1px rgb(184 201 188 / 88%);
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.create_task h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 15px;  
+    margin: 10px 0;
+}
+.create_task h3::first-letter{
+    text-transform: capitalize;
+}
+
+.create_task input[type="text"]{
+    font-size: 16px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.create_task input[type="submit"]{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: center;
+    background-color: #0d979b;
+    color: white;
+    border: none;
+    width: 90px;
+    height: 35px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: 1px 1px 3px 1px rgb(184 201 188 / 88%);
+}
+
+.create_task input[type="submit"]:hover{
+    background-color: #338cf1;
+}
+.underline::before{
+    content:""; 
+    position: absolute;
+    height: 2px;
+    width: 675px;
+    background: #ccc;
+    margin: 0px 10px;
+}
+
+.underline::after{
+     content: "";
+     position: absolute;
+     height: 2px;
+     width: 100%;
+     left: 0px;
+     bottom: 0px;
+     background: linear-gradient( to right, #99004d 0% ,#ff0080 100%);
+     transform: scalex(0);
+     transform-origin: left;
+     transition: all 0.3s ease;
+}
+
+.show_task h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 45px;
+}
+
+.show_task input[type="text"]{
+    font-size: 16px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.show_task input[type="reset"]{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: center;
+    background-color: #140601cc;
+    color: white;
+    border: none;
+    width: 115px;
+    height: 35px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: capitalize;
+    position: relative;
+    box-shadow: 1px 1px 6px 1px rgb(6 6 6 / 34%);
+}
+
+.task{
+    background-color: #0d979b;
+    color: white;
+    flex-direction: row;
+    margin-top: 15px;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 8px;
+    width: 675px;
+    height: 40px;
+    padding: 8px 30px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    box-shadow: 2px 2px 3px 0px rgb(184 201 188 / 88%);
+    border-radius: 3px;
+    position: relative;
+}
+
+.del{ 
+    color: red;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+}
+
+input[type="checkbox"]:checked{
+    filter: grayscale(1);
+}
+
+@media (max-width : 570px) {
+    .container{
+        width: 350px;
+        height: 580px;
+        padding: 15px;
+    }  
+    .create_task h3{
+        padding-left: 0;
+        font-size: 16px;
+        text-transform: lowercase;
+    }   
+    .create_task input[type="text"]{
+        padding-left: 0;
+        text-transform: lowercase;   
+    }
+    .underline::before{
+        margin: 0;
+        width: 330px;
+    }
+    .create_task input[type="submit"] {
+        font-size: 16px;
+        margin-top: 13px;
+        padding: 0;
+        text-transform: lowercase; 
+        margin-left: 0;
+        width: 80px;
+    }
+    .task{
+        padding: 5px 25px;
+        text-transform: lowercase;
+        margin-left: 0;
+        width: 330px;
+    }
+    input[type="checkbox"]{
+        left: 5px;
+    }
+    .show_task input[type="text"]{
+        padding-left: 0;
+        text-transform: lowercase; 
+    }
+    .show_task h3{
+        padding-left: 0;
+        font-size: 16px;
+        text-transform: lowercase;
+    }
+    .show_task input[type="reset"]{
+        font-size: 16px;
+        margin-top: 13px;
+        padding: 0;
+        text-transform: lowercase; 
+        margin-left: 0;
+        width: 85px;
+    }
+}
+
+@media ( (min-width: 571px)  and  (max-width: 770px)) {
+    .container{
+        width: 460px;
+    }
+    .underline::before{
+        margin: 3px 10px;
+        width: 440px;
+    }
+    .task{
+        text-transform: lowercase;
+        width: 440px;;
+    }
+} 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>to do list</title>
+</head>
+<body>
+
+    <section class="container">
+        <div class="create_task">
+            <h3>task list</h3>
+            <form class="form">
+                <input type="text"
+                       placeholder="new task" 
+                       name="mytask" 
+                       id="input">
+                <div class="underline"></div>
+                <input type="submit"
+                       value="add task" 
+                       id="add">
+            </form>
+        </div>
+
+        <div class="show_task">
+            <h3>tasks</h3>
+            <input type="text"
+             placeholder="find task ..." id="search_task">
+            <div class="underline"></div>
+            <div class="mytask"></div>
+            <input type="reset" id="all" value="clear tasks">
+        </div>
+    </section>
+    
+<script src="js/app.js"></script>
+</body>
+</html>
